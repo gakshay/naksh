@@ -1,0 +1,77 @@
+/*
+COLORS:
+yellow: #D5E14D
+*/
+html {
+	background: none;
+}
+
+a:link, a:visited, a:hover {
+	color: #000;
+	text-decoration: none;
+	outline: none;
+}
+
+#sticky_box {
+	overflow:hidden;
+	padding:4px 0 8px 9px;
+}
+
+#sticky_box a:first-child {
+	background:url("/images/sticky-note-small-light.jpg") no-repeat scroll 0 0 transparent;
+}
+
+#sticky_box > a {
+	background:url("/images/sticky-note-small-light.jpg") no-repeat scroll 0 0 transparent;
+	color:#333333;
+	cursor:pointer;
+	float:left;
+	font-size:14px;
+	height:162px;
+	line-height:17px;
+	overflow:hidden;
+	padding:20px 20px 12px;
+	margin: 10px;
+	text-align:center;
+	width:160px;
+}
+
+#sticky_box > a:hover{
+	background:url("/images/sticky-note-small.jpg") no-repeat scroll 0 0 transparent;
+	text-decoration: none;
+}
+
+#sticky_box .sticky_note .content{
+	text-align: center;
+	font-size: 24px;
+	line-height: 25px;
+	margin: 70px 30px;
+}
+
+#widgets {
+	overflow:hidden;
+	padding:4px 0 8px 9px;
+}
+
+#widgets a:first-child {
+	background:url("/images/widget-left.png") no-repeat scroll 0 0 transparent;
+}
+
+#widgets > a {
+	background:url("/images/widget.png") no-repeat scroll 0 0 transparent;
+	color:#333333;
+	cursor:pointer;
+	float:left;
+	font-size:14px;
+	height:162px;
+	line-height:17px;
+	overflow:hidden;
+	padding:20px 20px 12px;
+	text-align:center;
+	width:205px;
+}
+
+#widgets > a:hover{
+	background-position: 0 -194px !important;
+	text-decoration: none;
+}

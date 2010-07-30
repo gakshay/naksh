@@ -1,0 +1,70 @@
+<h1 align="center">Contact Us</h1>
+<br />
+<div class="splitter">COUNTRY</div>
+<div class = "frame">
+	<ul id="countries">
+		<li data-id="us">
+			<input type="submit" value="USA" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="india">
+			<input type="submit" value="India" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			</a>
+		</li>
+		<li data-id="brazil">
+			<input type="submit" value="Brazil" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="canada">
+			<input type="submit" value="Canada" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="australia">
+			<input type="submit" value="Australia" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+	</ul>
+</div>
+<br />
+
+
+<div class="splitter">STATE</div>
+<div class="frame">
+	<ul id="states" class="all">
+		<li data-id="chichago" class="us">
+			<input type="submit" value="Chichago" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="chennai" class="india">
+			<input type="submit" value="Chennai" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="newyork" class="us">
+			<input type="submit" value="New-York" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="delhi" class="india">
+			<input type="submit" value="Delhi" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="bangalore" class="india">
+			<input type="submit" value="Bangalore" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="sanfrancisco" class="us">
+			<input type="submit" value="San-Francisco" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+
+</div>
+<br />
+<script type="text/javascript" charset="utf-8">
+sortCountries();
+sortStates();
+
+$(function() {
+	$("#countries input").click(function(e) {
+		var c = $(this).parent().attr("data-id")
+		$("#states").quicksand($("#states li." + c), 
+		  {
+		    duration: 1000,
+		  }
+		);
+		e.preventDefault(); 
+	});
+});
+</script>
+<div class="splitter">CITY</div>
+<div class="frame">
+</div>
+<br />

@@ -1,0 +1,39 @@
+.clear{
+	clear: both;
+}
+
+.frame{
+	border:1px solid #DDDDDD;
+	clear:both;
+	height: auto;
+	overflow:auto;
+	position:relative;
+	padding-bottom: 30px;
+}
+.splitter {
+	background:url("/images/splitter.png") repeat-x scroll 0 100% #35393C;
+	border-bottom:1px solid #1D1F21;
+	font-size:18px;
+	padding:6px 40px 5px;
+	text-align:center;
+	color: #00AEEF;
+}
+
+ul li {
+	list-style: square outside none;
+	color:#686F74;
+	float:left;
+	font-family:"Helvetica Neue",sans-serif;
+	height: auto;
+	line-height:17px;
+	margin:20px 0 0 35px;
+	overflow:hidden;
+	text-align:center;
+	width: auto;
+}
+
+ul li a:hover, ul li input:hover{
+	background-color: #FDF5CE;
+	color: #3d3d3d;
+	outline: medium none;
+}
