@@ -25,13 +25,14 @@
 })(jQuery);
 
 function sortCountries(){
-$countries = $("ul#countries").find("li");
-  var $countriesSorted = $countries.sorted({
+$countries = $("ul#countries")
+$data = $countries.clone();
+  var $countriesSorted = $data.find("li").sorted({
           by: function(v) {
             return $(v).find('input').val().toLowerCase();
           }
         });
-  $("ul#countries").quicksand($countriesSorted, {
+  $countries.quicksand($countriesSorted, {
         duration: 800,
         easing: 'easeInOutQuad'
       });
@@ -51,58 +52,59 @@ $states = $("ul#states").find("li");
 }
 
 $(function() {
-	$("#countries input").click(function(e) {
-		var c = $(this).parent().attr("data-id");
-		console.log(c);
-	  $("#states").quicksand($("#states > li." + c), {
+  // get the first collection
+  var $states = $('#states');
+  var $cities = $('#cities');
+  console.log($states);
+  // clone applications to get a second collection
+  var $sdata = $states.clone(true);
+  var $cdata = $cities.clone(true);
+  // attempt to call Quicksand on every click
+  $("#countries input").click(function(e) {
+      var $sfilteredData = $sdata.find('li[data-country=' + $(this).parent().attr("data-id") + ']');
+      var $cfilteredData = $cdata.find('li[data-country=' + $(this).parent().attr("data-id") + ']');
+       var $ssortedData = $sfilteredData.sorted({
+        by: function(v) {
+           return $(v).find('input').val().toLowerCase();
+        }
+      });
+      var $csortedData = $cfilteredData.sorted({
+        by: function(v) {
+           return $(v).find('input').val().toLowerCase();
+        }
+      });
+    // finally, call quicksand
+    $states.quicksand($ssortedData, {
       duration: 800,
       easing: 'easeInOutQuad'
     });
-	e.preventDefault(); 
-	});
+    // finally, call quicksand
+    $cities.quicksand($csortedData, {
+      duration: 800,
+      easing: 'easeInOutQuad'
+    });
+
+  });
+
+  $("#states input").click(function(e) {
+      var $ap_cities = $('#cities');
+      alert("here");
+      // clone applications to get a second collection
+      var $ap_data = $ap_cities.clone(true);
+      var $cfilteredData = $ap_data.find('li[data-state=' + $(this).parent().attr("data-id") + ']');
+      var $csortedData = $cfilteredData.sorted({
+        by: function(v) {
+           return $(v).find('input').val().toLowerCase();
+        }
+      });
+    // finally, call quicksand
+    $ap_cities.quicksand($csortedData, {
+      duration: 800,
+      easing: 'easeInOutQuad'
+    });
+
+  });
+
 });
 
 
-
-// // DOMContentLoaded
-// $(function() {
-// 
-//   // bind radiobuttons in the form
-//   var $filterType = $('#countries');
-//   // var $filterSort = $('#filter input[name="sort"]');
-// 
-//   // get the first collection
-//   var $applications = $('#states');
-// 
-//   // clone applications to get a second collection
-//   var $data = $applications.clone();
-// 
-//   // attempt to call Quicksand on every form change
-//   $filterType.change(function(e) {
-//       var $filteredData = $data.find('li');
-// 
-//     // if sorted by size
-//     // if ($('#filter input[name="sort"]:checked').val() == "size") {
-//     //      var $sortedData = $filteredData.sorted({
-//     //        by: function(v) {
-//     //          return parseFloat($(v).find('span[data-type=size]').text());
-//     //        }
-//     //      });
-//     //    } else {
-//       // if sorted by name
-//       var $sortedData = $filteredData.sorted({
-//         by: function(v) {
-//           return $(v).find('input').value().toLowerCase();
-//         }
-//       });
-//     //}   
-// 
-//     // finally, call quicksand
-//     $applications.quicksand($sortedData, {
-//       duration: 800,
-//       easing: 'easeInOutQuad'
-//     });
-// 
-//   });
-// 
-// });

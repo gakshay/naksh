@@ -3,12 +3,8 @@
 <div class="splitter">COUNTRY</div>
 <div class = "frame">
 	<ul id="countries">
-		<li data-id="us">
-			<input type="submit" value="USA" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
-		</li>
-		<li data-id="india">
-			<input type="submit" value="India" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
-			</a>
+		<li data-id="australia">
+			<input type="submit" value="Australia" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="brazil">
 			<input type="submit" value="Brazil" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
@@ -16,8 +12,15 @@
 		<li data-id="canada">
 			<input type="submit" value="Canada" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
-		<li data-id="australia">
-			<input type="submit" value="Australia" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		<li data-id="india">
+			<input type="submit" value="India" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			</a>
+		</li>
+		<li data-id="uk">
+			<input type="submit" value="UK" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="us">
+			<input type="submit" value="USA" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 	</ul>
 </div>
@@ -27,44 +30,121 @@
 <div class="splitter">STATE</div>
 <div class="frame">
 	<ul id="states" class="all">
-		<li data-id="chichago" class="us">
-			<input type="submit" value="Chichago" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		<li data-id="il" data-country="us">
+			<input type="submit" value="IL" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
-		<li data-id="chennai" class="india">
-			<input type="submit" value="Chennai" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		<li data-id="ontario" data-country="canada">
+			<input type="submit" value="Ontario" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
-		<li data-id="newyork" class="us">
-			<input type="submit" value="New-York" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		<li data-id="ny" data-country="us">
+			<input type="submit" value="NY" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
-		<li data-id="delhi" class="india">
+		<li data-id="delhi" data-country="india">
 			<input type="submit" value="Delhi" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
-		<li data-id="bangalore" class="india">
-			<input type="submit" value="Bangalore" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		<li data-id="karnatka" data-country="india">
+			<input type="submit" value="Karnatka" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
-		<li data-id="sanfrancisco" class="us">
-			<input type="submit" value="San-Francisco" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		<li data-id="tamil-nadu" data-country="india">
+			<input type="submit" value="Tamil Nadu" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="ca" data-country="us">
+			<input type="submit" value="CA" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="ga" data-country="us">
+			<input type="submit" value="GA" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="rs" data-country="brazil">
+			<input type="submit" value="RS" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="tx" data-country="us">
+			<input type="submit" value="TX" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="alberta" data-country="canada">
+			<input type="submit" value="Alberta" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="melbourne" data-country="australia">
+			<input type="submit" value="Melbourne" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="cheshire" data-country="uk">
+			<input type="submit" value="Cheshire" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="brisbane" data-country="australia">
+			<input type="submit" value="brisbane" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="london" data-country="uk">
+			<input type="submit" value="London" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="maharashtra" data-country="india">
+			<input type="submit" value="Maharashtra" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="perth" data-country="australia">
+			<input type="submit" value="Perth" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="sydney" data-country="australia">
+			<input type="submit" value="Sydney" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 
 </div>
 <br />
-<script type="text/javascript" charset="utf-8">
-sortCountries();
-sortStates();
 
-$(function() {
-	$("#countries input").click(function(e) {
-		var c = $(this).parent().attr("data-id")
-		$("#states").quicksand($("#states li." + c), 
-		  {
-		    duration: 1000,
-		  }
-		);
-		e.preventDefault(); 
-	});
-});
-</script>
 <div class="splitter">CITY</div>
 <div class="frame">
+<ul id="cities" class="all">
+	<li data-id="chicago" data-country="us" data-state="il">
+			<input type="submit" value="Chicago" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="toronto" data-country="canada" data-state="ontario">
+			<input type="submit" value="Toronto" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="newyork" data-country="us" data-state="ny">
+			<input type="submit" value="New-York" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="new-delhi" data-country="india" data-state="delhi">
+			<input type="submit" value="New Delhi" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="bangalore" data-country="india" data-state="karnatka">
+			<input type="submit" value="Bangalore" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="chennai" data-country="india" data-state="tamil-nadu">
+			<input type="submit" value="Chennai" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="san-francisco" data-country="us" data-state="ca">
+			<input type="submit" value="San-Francisco" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="atlanta" data-country="us" data-state="ga">
+			<input type="submit" value="Atlanta" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="porto-alegre" data-country="brazil" data-state="rs">
+			<input type="submit" value="Porto Alegre" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="dallas" data-country="us" data-state="tx">
+			<input type="submit" value="Dallas" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="calgary" data-country="canada" data-state="alberta">
+			<input type="submit" value="Calgary" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="melbourne" data-country="australia" data-state="melbourne">
+			<input type="submit" value="Melbourne" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="manchester" data-country="uk" data-state="manchester">
+			<input type="submit" value="Manchester" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="brisbane" data-country="australia" data-state="brisbane">
+			<input type="submit" value="brisbane" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="london" data-country="uk" data-state="london">
+			<input type="submit" value="London" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="pune" data-country="india" data-state="maharashtra">
+			<input type="submit" value="Pune" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="perth" data-country="australia" data-state="perth">
+			<input type="submit" value="Perth" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+		<li data-id="sydney" data-country="australia" data-state="sydney">
+			<input type="submit" value="Sydney" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+		</li>
+</ul>
 </div>
 <br />
