@@ -51,60 +51,45 @@ $states = $("ul#states").find("li");
       });
 }
 
-$(function() {
-  // get the first collection
-  var $states = $('#states');
-  var $cities = $('#cities');
-  console.log($states);
-  // clone applications to get a second collection
-  var $sdata = $states.clone(true);
-  var $cdata = $cities.clone(true);
+function shuffleStates(ele) {
   // attempt to call Quicksand on every click
-  $("#countries input").click(function(e) {
-      var $sfilteredData = $sdata.find('li[data-country=' + $(this).parent().attr("data-id") + ']');
-      var $cfilteredData = $cdata.find('li[data-country=' + $(this).parent().attr("data-id") + ']');
-       var $ssortedData = $sfilteredData.sorted({
+  //$("#countries input").click(function(e) {
+      var $filteredData = $state_data.find('li[data-country=' + $(ele).parent().attr("data-id") + ']');
+      var $filteredCData = $city_data.find('li[data-country=' + $(ele).parent().attr("data-id") + ']');
+       var $sortedData = $filteredData.sorted({
         by: function(v) {
            return $(v).find('input').val().toLowerCase();
-        }
-      });
-      var $csortedData = $cfilteredData.sorted({
-        by: function(v) {
-           return $(v).find('input').val().toLowerCase();
-        }
-      });
+					}
+        });
+				var $sortedCData = $filteredCData.sorted({
+	        by: function(v) {
+	           return $(v).find('input').val().toLowerCase();
+						}
+	        });
     // finally, call quicksand
-    $states.quicksand($ssortedData, {
+    $states.quicksand($sortedData, {
       duration: 800,
       easing: 'easeInOutQuad'
     });
-    // finally, call quicksand
-    $cities.quicksand($csortedData, {
+		$cities.quicksand($sortedCData, {
       duration: 800,
       easing: 'easeInOutQuad'
     });
+	}//);
+//});
 
-  });
-
-  $("#states input").click(function(e) {
-      var $ap_cities = $('#cities');
-      alert("here");
-      // clone applications to get a second collection
-      var $ap_data = $ap_cities.clone(true);
-      var $cfilteredData = $ap_data.find('li[data-state=' + $(this).parent().attr("data-id") + ']');
-      var $csortedData = $cfilteredData.sorted({
+function shuffleCities(ele) {
+      var $filteredData = $city_data.find('li[data-state=' + $(ele).parent().attr("data-id") + ']');
+       var $sortedData = $filteredData.sorted({
         by: function(v) {
            return $(v).find('input').val().toLowerCase();
-        }
-      });
+					}
+        });
     // finally, call quicksand
-    $ap_cities.quicksand($csortedData, {
-      duration: 800,
+    $cities.quicksand($sortedData, {
       easing: 'easeInOutQuad'
     });
-
-  });
-
-});
+	}
+//});
 
 
