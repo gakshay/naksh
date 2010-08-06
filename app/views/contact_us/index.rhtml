@@ -1,5 +1,15 @@
 <h1 align="center">Contact Us</h1>
 <br />
+<div id="dialog-modal" title="Address Location">
+	<pre>
+No Address.
+	</pre>
+	<span>
+		<input type="text" value="Mobile No" />
+		<button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Send SMS</span></button>
+	</span>
+</div>
+
 <div class="splitter">COUNTRY</div>
 <div class = "frame">
 	<ul id="countries">
@@ -92,72 +102,109 @@
 <div class="frame">
 <ul id="cities" class="all">
 	<li data-id="chicago" data-country="us" data-state="il">
-			<input type="submit" value="Chicago" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Chicago" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="toronto" data-country="canada" data-state="ontario">
-			<input type="submit" value="Toronto" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Toronto" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="newyork" data-country="us" data-state="ny">
-			<input type="submit" value="New-York" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="New-York" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="new-delhi" data-country="india" data-state="delhi">
-			<input type="submit" value="New Delhi" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="New Delhi" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="bangalore" data-country="india" data-state="karnatka">
-			<input type="submit" value="Bangalore" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Bangalore" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="chennai" data-country="india" data-state="tamil-nadu">
-			<input type="submit" value="Chennai" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Chennai" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="san-francisco" data-country="us" data-state="ca">
-			<input type="submit" value="San-Francisco" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="San-Francisco" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="atlanta" data-country="us" data-state="ga">
-			<input type="submit" value="Atlanta" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Atlanta" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="porto-alegre" data-country="brazil" data-state="rs">
-			<input type="submit" value="Porto Alegre" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Porto Alegre" onclick="selectAddress(this);"  class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="dallas" data-country="us" data-state="tx">
-			<input type="submit" value="Dallas" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Dallas" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="calgary" data-country="canada" data-state="alberta">
-			<input type="submit" value="Calgary" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Calgary" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="melbourne" data-country="australia" data-state="melbourne">
-			<input type="submit" value="Melbourne" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Melbourne" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="manchester" data-country="uk" data-state="manchester">
-			<input type="submit" value="Manchester" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Manchester" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="brisbane" data-country="australia" data-state="brisbane">
-			<input type="submit" value="brisbane" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="brisbane" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="london" data-country="uk" data-state="london">
-			<input type="submit" value="London" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="London" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="cheshire" data-country="uk" data-state="cheshire">
-			<input type="submit" value="Cheshire" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Cheshire" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="pune" data-country="india" data-state="maharashtra">
-			<input type="submit" value="Pune" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Pune" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="mumbai" data-country="india" data-state="maharashtra">
-			<input type="submit" value="Mumbai" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Mumbai" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="perth" data-country="australia" data-state="perth">
-			<input type="submit" value="Perth" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Perth" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 		<li data-id="sydney" data-country="australia" data-state="sydney">
-			<input type="submit" value="Sydney" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+			<input type="submit" value="Sydney" onclick="selectAddress(this);" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
 		</li>
 </ul>
 </div>
 <br />
+<div class="frame">
+<ul id="address" class="hidden">
+	<li data-id="add1" data-country="australia" data-state="melbourne" data-city="melbourne">
+		<pre>
+ThoughtWorks Australia Pty. Ltd.
+Level 15, 303 Collins Street
+Melbourne, VIC 3000, Australia
+GPO Box 4701, VIC 3001
+t: +61 3 9691 6500
+f: +61 3 9691 6550
+		</pre>
+	</li>
+	<li data-id="add2" data-country="india" data-state="karnatka" data-city="bangalore">
+		<pre>
+ThoughtWorks Technologies (India) Pvt Ltd
+2nd Floor, Tower C, Corporate Block, Diamond District
+Airport Road
+Bangalore - 560 008, India
+t: +91 80 4064 9570
+f: +91 80 2508 9584
+		</pre>
+	</li>
+	<li data-id="add3" data-country="us" data-state="il" data-city="chicago">
+		<pre>
+200 E Randolph St
+25th Floor
+Chicago, IL 60601-6501
+USA
+t: +1 312 373 1000
+f: +1 312 373 1001		
+		</pre>
+	</li>
+</ul>
+</div>
+
 
 <script type="text/javascript" charset="utf-8">
 	var $states = $('#states');
 	var $state_data = $states.clone(true);
 	var $cities = $('#cities');
 	var $city_data = $cities.clone(true);
+	var $address = $('#address');
+	var $address_data = $address.clone(true);
 </script>

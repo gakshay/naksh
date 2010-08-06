@@ -79,17 +79,43 @@ function shuffleStates(ele) {
 //});
 
 function shuffleCities(ele) {
-      var $filteredData = $city_data.find('li[data-state=' + $(ele).parent().attr("data-id") + ']');
-       var $sortedData = $filteredData.sorted({
-        by: function(v) {
-           return $(v).find('input').val().toLowerCase();
-					}
-        });
-    // finally, call quicksand
-    $cities.quicksand($sortedData, {
-      easing: 'easeInOutQuad'
-    });
-	}
+    var $filteredData = $city_data.find('li[data-state=' + $(ele).parent().attr("data-id") + ']');
+     var $sortedData = $filteredData.sorted({
+      by: function(v) {
+         return $(v).find('input').val().toLowerCase();
+				}
+      });
+  // finally, call quicksand
+  $cities.quicksand($sortedData, {
+    duration: 800,
+    easing: 'easeInOutQuad'
+  });
+}
 //});
+
+function selectAddress(ele){
+  var $filteredData = $address_data.find('li[data-city=' + $(ele).parent().attr("data-id") + ']');
+//  $address.quicksand($filteredData, {
+//    duration: 100,
+//    easing: 'easeInOutQuad'
+//  });
+//  $address.removeClass("hidden").addClass("show");
+	$("#dialog-modal pre").text($filteredData.find('pre').text());
+	$('#dialog-modal').dialog('open');
+			return false;
+}
+
+
+$(function() {
+		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+		$("#dialog-model").dialog("destroy");
+	
+		$("#dialog-modal").dialog({
+			height: 300,
+			width: 450,
+			modal: true,
+			autoOpen: false
+		});
+	});
 
 
